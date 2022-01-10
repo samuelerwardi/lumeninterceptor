@@ -33,8 +33,8 @@ class BaseHandler extends ExceptionHandler
         }
         $request = Request::createFromGlobals();
         $requestId = '';
-        if ($request->hasHeader('X-Request-ID')) {
-            $requestId = $request->header('X-Request-ID');
+        if ($request->hasHeader('x-request-id')) {
+            $requestId = $request->header('x-request-id');
         }
         $logger->error($e, ['correlation_id' => $requestId, 'exception' => $e]);
     }
