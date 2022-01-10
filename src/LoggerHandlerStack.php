@@ -2,12 +2,12 @@
 
 namespace Yannice92\LumenInterceptor;
 
-use App\Logger\Formatter\JsonFormatter;
-use App\Logger\Formatter\MessageFormatter;
-use App\Logger\Middleware\Guzzle\GuzzleMiddleware;
 use GuzzleHttp\HandlerStack;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Yannice92\LumenInterceptor\Http\Middleware\GuzzleMiddleware;
+use Yannice92\LumenInterceptor\Logging\JsonFormatter;
+use Yannice92\LumenInterceptor\Logging\MessageFormatter;
 
 class LoggerHandlerStack
 {

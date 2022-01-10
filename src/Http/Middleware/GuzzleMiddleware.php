@@ -2,10 +2,9 @@
 
 namespace Yannice92\LumenInterceptor\Http\Middleware;
 
-use App\Logger\Formatter\JsonFormatter;
-use App\Logger\Formatter\MessageFormatter;
 use GuzzleHttp\Exception\RequestException;
 use Psr\Log\LoggerInterface;
+use Yannice92\LumenInterceptor\Logging\MessageFormatter;
 
 class GuzzleMiddleware
 {
