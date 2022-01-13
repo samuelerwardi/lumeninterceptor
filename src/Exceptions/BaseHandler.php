@@ -36,6 +36,6 @@ class BaseHandler extends ExceptionHandler
         if ($request->hasHeader('x-request-id')) {
             $requestId = $request->header('x-request-id');
         }
-        $logger->error($e, ['correlation_id' => $requestId, 'exception' => $e]);
+        $logger->error($e, ['correlation_id' => $requestId, 'exception' => $e, "message_trace" => $e->getTraceAsString()]);
     }
 }
