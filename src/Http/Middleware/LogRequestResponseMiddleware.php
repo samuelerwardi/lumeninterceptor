@@ -44,6 +44,7 @@ class LogRequestResponseMiddleware
 
         $data['request'] = $this->str($psrServerRequest, $data['correlation_id']);
         $data['response'] = $this->str($psrServerResponse, $data['correlation_id']);
+        $data['app_version'] = env('APP_VERSION') ? env('APP_VERSION') : null;
         $time_end = microtime(true);
         $data['method'] = $this->method;
         $data['url'] = $this->url;
