@@ -26,6 +26,17 @@ so it should be `class Handler extends BaseHandler`
     ]);
    ```
 3. Add `X-Request-ID` header for correlation Id
+4. Add config/logging.php
+`'stdout' => [
+   'driver' => 'monolog',
+   'level' => 'info',
+   'handler' => StreamHandler::class,
+   'with' => [
+   'stream' => 'php://stdout',
+   ],
+   'formatter' => \Yannice92\LumenInterceptor\Logging\JsonFormatter::class,
+   ],`
+
 
 Authors
 -------
